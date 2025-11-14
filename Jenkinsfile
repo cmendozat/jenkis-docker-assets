@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('update branch') {
             steps {
-                git pull
+                java --version
             }
         }
     }
