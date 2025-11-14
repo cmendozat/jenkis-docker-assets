@@ -5,7 +5,10 @@ pipeline {
     stages {
         stage('alkosto-ccv2 folder') {
             steps {
-                sh 'pwd' 
+                sh '''
+                    cd ~
+                    ls -la
+                ''' 
             }
         }
         stage('update branch release-d1') {
