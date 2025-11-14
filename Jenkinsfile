@@ -10,15 +10,19 @@ pipeline {
         }
         stage('update branch release-d1') {
             steps {
-                sh "git checkout release-d1
-                    git pull"
+                sh '''
+                    git checkout release-d1
+                    git pull 
+                '''
             }
         }
         stage('Build') {
             steps {
-                sh "cd core-customize/hybris/bin/platform
-                ant clean all
-                ant build"
+                sh '''
+                    cd core-customize/hybris/bin/platform
+                    ant clean all
+                    ant build
+                '''
             }
         }
     }
