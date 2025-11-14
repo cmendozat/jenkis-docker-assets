@@ -6,7 +6,7 @@ pipeline {
         stage('alkosto-ccv2 folder') {
             steps {
                 sh '''
-                    cd ~
+                    cd ~/opt/Alkosto_CCV2_2/alkosto-ccv2/core-customize/hybris/bin/platform
                     ls -la
                 ''' 
             }
