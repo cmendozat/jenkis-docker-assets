@@ -8,6 +8,7 @@ pipeline {
         stage('Fix Git Safe Directory') {
             steps {
                 sh 'git config --system --add safe.directory `pwd`'
+            }
         }
         stage('update branch release-d1') {
             steps {
