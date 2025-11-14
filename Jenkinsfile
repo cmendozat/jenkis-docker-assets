@@ -2,10 +2,13 @@ pipeline {
     agent {
         docker { 
             image 'cmendozat/jenkinsdocker-report:2211.44'
-            args '-u root' 
         }
     }
     stages {
+        stage('Fix Git Safe Directory') {
+            steps {
+                sh 'git config --system --add safe.directory `pwd`'
+        }
         stage('update branch release-d1') {
             steps {
                 sh '''
