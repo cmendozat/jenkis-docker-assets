@@ -15,6 +15,7 @@ pipeline {
                     pwd
                     cd /opt/Alkosto_CCV2_2/alkosto-ccv2/core-customize/hybris/bin/platform
                     ls -la
+                    git status
                 '''
             }
         }
