@@ -10,8 +10,7 @@ pipeline {
                 sh '''
                     cd ~/opt/Alkosto_CCV2_2/alkosto-ccv2
                     ls -la
-                    chown -R root:root ~/opt/Alkosto_CCV2_2/alkosto-ccv2
-                    git checkout release-d1
+                    whoami
                 '''
             }
         }
