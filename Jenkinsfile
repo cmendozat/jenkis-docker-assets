@@ -9,6 +9,7 @@ pipeline {
         stage('update branch release-d1') {
             steps {
                 sh '''
+                    cd ..
                     ls -la
                     cd ~/opt/Alkosto_CCV2_2/alkosto-ccv2
                     whoami
