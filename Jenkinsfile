@@ -5,18 +5,12 @@ pipeline {
         }
     }
     stages {
-        stage('Fix Git Safe Directory') {
-            steps {
-                sh 'git config --system --add safe.directory `pwd`'
-            }
-        }
         stage('update branch release-d1') {
             steps {
                 sh '''
                     cd ~/opt/Alkosto_CCV2_2/alkosto-ccv2
                     ls -la
                     git checkout release-d1
-                    git pull 
                 '''
             }
         }
