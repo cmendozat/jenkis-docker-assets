@@ -10,6 +10,8 @@ pipeline {
             steps {
                 sh '''
                     java --version
+                    whoami
+                    ls -la
                 '''
             }
         }
