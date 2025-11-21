@@ -6,16 +6,22 @@ pipeline {
         }
     }
     stages {
+        stage('checkout') {
+            steps {
+                sh '''
+                    cd /opt/Alkosto_CCV2_2/alkosto-ccv2
+                    git checkout release-d1
+                    git pull
+                '''
+            }
+        }
         stage('Build') {
             steps {
                 sh '''
-                    java --version
-                    whoami
-                    ls -la
-                    pwd
                     cd /opt/Alkosto_CCV2_2/alkosto-ccv2/core-customize/hybris/bin/platform
-                    ls -la
-                    git status
+                    . ./setantenv.sh
+                    ant clean all
+                    ant build
                 '''
             }
         }
