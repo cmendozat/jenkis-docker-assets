@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker { 
             image 'cmendozat/jenkinsdocker-report:2211.44'
+            args '-u root'
         }
     }
     stages {
