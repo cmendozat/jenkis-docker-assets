@@ -12,6 +12,7 @@ pipeline {
                     java --version
                     whoami
                     ls -la
+                    pwd
                 '''
             }
         }
