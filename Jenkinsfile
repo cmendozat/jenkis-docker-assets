@@ -30,6 +30,8 @@ pipeline {
                     # Instalar Node 24
                     nvm install 24
 
+                    nvm use 22
+
                     node -v
                     npm -v
                     npm install -g grunt-cli
