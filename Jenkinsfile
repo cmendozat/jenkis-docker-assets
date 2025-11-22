@@ -24,7 +24,7 @@ pipeline {
 
                     # Cargar NVM correctamente
                     export NVM_DIR="$HOME/.nvm"
-                    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+                    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
                     # Instalar Node 24
                     nvm install 24
