@@ -34,6 +34,8 @@ pipeline {
                     npm -v
                     npm install -g grunt-cli
 
+                    npm install
+
                     grunt create-aws-assets
                     cd /web/webroot/release/
                     ls -la
