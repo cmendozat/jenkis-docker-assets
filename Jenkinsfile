@@ -31,13 +31,13 @@ pipeline {
 
                     node -v
                     npm -v
+                    npm install -g grunt-cli
                 '''
             }
         }
         stage('install grunt') {
             steps {
                 sh '''
-                    npm install -g grunt-cli
                     grunt --version
                 '''
             }
