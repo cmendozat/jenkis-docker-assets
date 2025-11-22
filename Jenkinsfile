@@ -14,12 +14,19 @@ pipeline {
                 '''
             }
         }
-        stage('install npm') {
+        stage('Install Node via NVM') {
             steps {
                 sh '''
-                    apt-get install curl -y
-                    curl -o- https://fnm.vercel.app/install | bash
-                    fnm install 24
+                    # Instalar NVM
+                    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+                    # Cargar NVM correctamente
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
+                    # Instalar Node 24
+                    nvm install 24
+
                     node -v
                     npm -v
                 '''
