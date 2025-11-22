@@ -37,7 +37,7 @@ pipeline {
                     npm install
 
                     grunt create-aws-assets --force
-                    cd /web/webroot/release/
+                    cd web/webroot/release/
                     ls -la
                 '''
             }
