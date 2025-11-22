@@ -14,7 +14,7 @@ pipeline {
                 '''
             }
         }
-        stage('Install Node via NVM') {
+        stage('Install Node via NVM and Generate assets') {
             steps {
                 sh '''
                     apt-get install curl -y
@@ -32,19 +32,7 @@ pipeline {
                     node -v
                     npm -v
                     npm install -g grunt-cli
-                '''
-            }
-        }
-        stage('install grunt') {
-            steps {
-                sh '''
-                    grunt --version
-                '''
-            }
-        }
-        stage('generate assets') {
-            steps {
-                sh '''
+
                     cd /opt/Alkosto_CCV2_2/alkosto-ccv2/core-customize/hybris/bin/custom/alkostostorefront/
                     grunt create-aws-assets
                     cd /web/webroot/release/
