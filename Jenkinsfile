@@ -17,6 +17,8 @@ pipeline {
         stage('Install Node via NVM') {
             steps {
                 sh '''
+                    apt-get install curl -y
+
                     # Instalar NVM
                     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
