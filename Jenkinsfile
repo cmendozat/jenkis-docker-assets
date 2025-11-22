@@ -27,10 +27,8 @@ pipeline {
                     export NVM_DIR="$HOME/.nvm"
                     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-                    # Instalar Node 24
-                    nvm install 24
-
-                    nvm use 22
+                    # Instalar Node 22
+                    nvm install 22
 
                     node -v
                     npm -v
