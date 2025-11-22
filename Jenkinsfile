@@ -17,6 +17,7 @@ pipeline {
         stage('install npm') {
             steps {
                 sh '''
+                    apt-get install curl
                     curl -o- https://fnm.vercel.app/install | bash
                     fnm install 24
                     node -v
