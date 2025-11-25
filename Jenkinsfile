@@ -49,7 +49,7 @@ pipeline {
                     cd /opt
                     mkdir paquete-assets
                     cd paquete-assets
-                    git clone https://github.com/cmendozat/jenkis-docker-assets.git
+                    git clone https://cmendozat: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@github.com/cmendozat/jenkis-docker-assets.git
                     ls -la
                     cd jenkis-docker-assets
 
