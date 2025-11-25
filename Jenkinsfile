@@ -52,6 +52,9 @@ pipeline {
                     git clone https://github.com/cmendozat/jenkis-docker-assets.git
                     ls -la
                     cd jenkis-docker-assets
+
+                    git config user.email "carlos-jose0294@hotmail.com"
+                    git config user.name "cmendozat"
                     git checkout dev
                     git pull
 
