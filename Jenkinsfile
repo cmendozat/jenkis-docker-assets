@@ -53,7 +53,7 @@ pipeline {
                     ls -la
                     cd jenkis-docker-assets
 
-                    git remote set-url origin https://cmendozat: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@github.com/cmendozat/jenkis-docker-assets.git
+                    git remote set-url origin https://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@github.com/cmendozat/jenkis-docker-assets
                     git config user.email "carlos-jose0294@hotmail.com"
                     git config user.name "cmendozat"
                     git checkout dev
